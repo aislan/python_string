@@ -13,8 +13,8 @@ class ExtratorArgumentoUrl:
             return False
     
     def retorna_moedas(self):
-        busca_moeda_origem = "moedaorigem"
-        busca_moeda_destino = "moedadestino"
+        busca_moeda_origem = "moedaorigem="
+        busca_moeda_destino = "moedadestino="
 
         inicio_substring_moeda_origem = self.encontra_indice_inicio_substring(busca_moeda_origem)
         final_substring_moeda_origem = self.url.find("&")
@@ -28,5 +28,5 @@ class ExtratorArgumentoUrl:
 
 
     def encontra_indice_inicio_substring(self,moeda_ou_valor):
-        return self.url.find(moeda_ou_valor) + len(moeda_ou_valor) + 1
+        return self.url.find(moeda_ou_valor) + len(moeda_ou_valor) 
 
